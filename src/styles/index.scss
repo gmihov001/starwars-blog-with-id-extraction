@@ -1,3 +1,92 @@
-/* 
+/*
     General Styles
 */
+@import "~bootstrap/scss/bootstrap.scss";
+body{
+    background: black;
+}
+.hr-top, .hr-bottom{
+    border-top: .05rem solid yellow;
+    width: 1050px;
+}
+
+.pText{
+    color:lightgray;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+}
+/****************************** NavBar Component *********************/
+.navbar{
+ background: black;
+}
+.logo{
+    width: 180px;
+    height: 180px;
+}
+.social-cont{
+    color: white;
+    font-size: 20px;
+
+}
+.facebook, .instagram, .twitter{
+    margin-left:10px;
+}
+.facebook:hover, .instagram:hover, .twitter:hover, .btn-text:hover{
+color:#1ebba3;
+}
+
+.input, .search-btn{
+    height: 30px;
+}
+.btn-text{
+    font-size: 10px;
+}
+
+/****************************** Card Component *********************/
+.card-planets, .card-characters{
+    background: black;
+    color:white;
+}
+.title{
+    color:white;
+}
+/****************************** Footer Component *********************/
+.page-footer{
+
+    height: 100px;
+    margin-top:300px;
+}
+.footer-cr {
+    color:white;
+
+}
+.card {
+    padding: 0px;
+    margin: 10px;
+}
+.card-body {
+    padding: 10px;
+    background-color: dimgrey;
+    color: white;
+    border-radius: 5px;
+    height: 310px;
+}
+
+img {
+    height: 140px;
+    width: 140px;
+    object-fit: cover;
+}
+.row {
+    align-items: center;
+    justify-content: center;
+}
+.card-subtitle {
+    color: magenta;
+}
+.card-text {
+    font-weight: 200;
+    vertical-align: sub;
+}
