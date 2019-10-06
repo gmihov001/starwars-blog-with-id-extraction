@@ -28,6 +28,14 @@ export class Home extends React.Component {
 			});
 	}
 
+	parserFunction(url) {
+		let temp = "";
+		for (var i = url.length - 2; i >= 0; i--) {
+			if (url[i] !== "/") temp = url[i] + temp;
+			else return parseInt(temp);
+		}
+	}
+
 	render() {
 		let characterList = this.state.character.map((item, index) => {
 			return (
@@ -40,6 +48,8 @@ export class Home extends React.Component {
 					prop2_title="Height : "
 					prop3={item.birth_year}
 					prop3_title="Birth Year : "
+					type="people"
+					id={this.parserFunction(item.url)}
 				/>
 			);
 		});
@@ -54,6 +64,8 @@ export class Home extends React.Component {
 					prop2_title="Terrain : "
 					prop3={item.population}
 					prop3_title="Population : "
+					type="planets"
+					id={this.parserFunction(item.url)}
 				/>
 			);
 		});

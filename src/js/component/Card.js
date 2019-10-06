@@ -1,11 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 export function Card(props) {
 	return (
 		<div className="card-characters card col-lg-2 col-md-2">
 			<div className="card-body">
-				<img src={props.imgUrl} className="card-img-top" alt="..." />
+				<Link to={`/details/${props.type}/${props.id}`}>
+					<img src={props.imgUrl} className="card-img-top" alt="..." />
+				</Link>
 				<h5 className="title card-title" />
 				<h6 className="card-subtitle mb-2">
 					{props.prop1_title}
@@ -31,5 +34,7 @@ Card.propTypes = {
 	imgUrl: PropTypes.string,
 	prop1_title: PropTypes.string,
 	prop2_title: PropTypes.string,
-	prop3_title: PropTypes.string
+	prop3_title: PropTypes.string,
+	type: PropTypes.string,
+	id: PropTypes.number
 };
