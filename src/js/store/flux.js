@@ -1,16 +1,12 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
+			favorites: [
 				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
+					name: "FIRST"
 				},
 				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
+					name: "SECOND"
 				}
 			]
 		},
